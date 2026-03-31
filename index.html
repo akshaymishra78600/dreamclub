@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAI CLUB VIP MEMBERS</title>
+<style>
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background:#022f2b;
+color:white;
+text-align:center;
+}
+.container{
+max-width:420px;
+margin:0 auto;
+padding:16px;
+}
+.top-badge{
+background:#27e1d5;
+color:#003b37;
+padding:10px;
+border-radius:20px;
+font-weight:bold;
+font-size:14px;
+margin-top:10px;
+}
+.card{
+background:#063f3a;
+padding:14px;
+border-radius:18px;
+margin-top:16px;
+border:2px solid #1bd6cc;
+}
+.card img{
+width:100%;
+border-radius:14px;
+}
+h1{
+font-size:28px;
+margin:16px 0 8px;
+}
+.sub{
+color:#c8d7d6;
+font-size:14px;
+}
+.join-btn{
+background:#27e1d5;
+color:black;
+padding:16px;
+border-radius:30px;
+font-weight:bold;
+margin:20px 0;
+display:block;
+text-decoration:none;
+font-size:18px;
+}
+.timer{
+display:flex;
+justify-content:center;
+gap:20px;
+margin:20px 0;
+}
+.box{
+background:#083c37;
+padding:20px;
+border-radius:14px;
+width:120px;
+}
+.num{
+font-size:28px;
+font-weight:bold;
+}
+.label{
+color:#ff5f7a;
+font-size:12px;
+}
+.list{
+text-align:left;
+margin-top:20px;
+line-height:1.8;
+}
+.star{
+color:gold;
+margin-right:6px;
+}
+</style>
+</head>
+<body>
+<div class="container">
 
+<div class="top-badge">VIP SURESHOT • LIMITED TIME • JOIN FAST</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800" alt="car">
+</div>
+
+<h1>JAI CLUB VIP MEMBERS</h1>
+<div class="sub">🏆</div>
+<div class="sub">JOIN FAST FOR FREE SURESHOT VIP HACKS</div>
+
+<a class="join-btn" href="#">JOIN HACK CHANNEL</a>
+
+<div class="sub">FREE VIP HACKS</div>
+<div style="color:#27e1d5;font-weight:bold;margin-top:6px;">HURRY UP! JOIN NOW</div>
+
+<div class="timer">
+<div class="box">
+<div class="num" id="min">29</div>
+<div class="label">MIN</div>
+</div>
+<div class="box">
+<div class="num" id="sec">39</div>
+<div class="label">SEC</div>
+</div>
+</div>
+
+<div class="list">
+<div><span class="star">⭐</span>100% WINNING SURESHOT</div>
+<div><span class="star">⭐</span>100% LOSS RECOVERY</div>
+<div><span class="star">⭐</span>MONTHLY INCOME 30K–50K</div>
+</div>
+
+</div>
+
+<script>
+let m=29;
+let s=39;
+setInterval(()=>{
+s--;
+if(s<0){s=59;m--;}
+if(m<0){m=29;s=39;}
+document.getElementById("min").innerText=m;
+document.getElementById("sec").innerText=s;
+},1000);
+</script>
+
+</body>
+</html>
