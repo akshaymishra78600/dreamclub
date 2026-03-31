@@ -4,320 +4,246 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>JAI CLUB VIP MEMBERS</title>
+
 <style>
-  :root {
-    --bg: #032d29;
-    --panel: #083b37;
-    --panel-2: #0b4742;
-    --border: #28e5d8;
-    --accent: #35eadc;
-    --accent-dark: #19cdbf;
-    --text: #f5fffe;
-    --muted: #c8dad8;
-    --pink: #ff5e84;
-    --gold: #f5c84b;
-    --shadow: rgba(0, 0, 0, 0.28);
-  }
+:root{
+--accent:#35eadc;
+--pink:#ff5e84;
+}
 
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    min-height: 100%;
-    background:
-      radial-gradient(circle at top, rgba(53,234,220,0.08), transparent 35%),
-      linear-gradient(180deg, #022522 0%, #01231f 100%);
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-  }
+*{box-sizing:border-box}
 
-  body {
-    display: flex;
-    justify-content: center;
-  }
+html,body{
+margin:0;
+background:linear-gradient(180deg,#022522 0%,#01231f 100%);
+font-family:Arial,Helvetica,sans-serif;
+color:#fff;
+}
 
-  .phone {
-    width: 100%;
-    max-width: 430px;
-    min-height: 100vh;
-    padding: 14px 14px 22px;
-  }
+body{
+display:flex;
+justify-content:center;
+}
 
-  .top-strip {
-    overflow: hidden;
-    background: var(--accent);
-    color: #003b38;
-    border-radius: 999px;
-    padding: 14px 0;
-    font-weight: 900;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    box-shadow: 0 8px 24px rgba(0,0,0,.18);
-    border: 1px solid rgba(255,255,255,.15);
-  }
+.phone{
+width:100%;
+max-width:430px;
+padding:10px 14px 12px;
+}
 
-  .marquee {
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100%;
-    animation: scrollLeft 12s linear infinite;
-    font-size: 14px;
-  }
+.top-strip{
+overflow:hidden;
+background:var(--accent);
+color:#003b38;
+border-radius:999px;
+padding:12px 0;
+font-weight:900;
+text-transform:uppercase;
+}
 
-  @keyframes scrollLeft {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+.marquee{
+display:inline-block;
+white-space:nowrap;
+padding-left:100%;
+animation:scrollLeft 12s linear infinite;
+font-size:13px;
+}
 
-  .card {
-    margin-top: 14px;
-    background: linear-gradient(180deg, rgba(10,72,66,.95), rgba(5,52,48,.98));
-    border: 2px solid rgba(40,229,216,.92);
-    border-radius: 22px;
-    padding: 14px;
-    box-shadow: 0 20px 40px var(--shadow);
-  }
+@keyframes scrollLeft{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
 
-  .hero-img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    display: block;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,.08);
-  }
+.card{
+margin-top:10px;
+background:linear-gradient(180deg,#0a4842,#053430);
+border:2px solid #28e5d8;
+border-radius:22px;
+padding:12px;
+}
 
-  .title {
-    margin: 18px 0 8px;
-    text-align: center;
-    font-size: clamp(30px, 8vw, 38px);
-    line-height: 1.02;
-    font-weight: 900;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    text-shadow: 0 3px 0 rgba(0,0,0,.18);
-  }
+.hero-img{
+width:100%;
+border-radius:16px;
+}
 
-  .subtitle-wrap {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+.title{
+margin:12px 0 4px;
+text-align:center;
+font-size:32px;
+font-weight:900;
+text-transform:uppercase;
+}
 
-  .trophy {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    margin-bottom: 4px;
-    font-size: 22px;
-    filter: drop-shadow(0 2px 2px rgba(0,0,0,.25));
-  }
+.subtitle-wrap{
+text-align:center;
+margin-bottom:6px;
+}
 
-  .subtitle {
-    text-align: center;
-    color: #d7e8e6;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-  }
+.subtitle{
+font-size:13px;
+opacity:.9;
+}
 
-  .cta {
-    display: block;
-    margin: 18px auto 0;
-    width: 100%;
-    max-width: 360px;
-    text-align: center;
-    text-decoration: none;
-    color: #002725;
-    background: linear-gradient(180deg, #4af2e6 0%, #24ddd0 100%);
-    border-radius: 999px;
-    padding: 17px 18px;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-family: Georgia, "Times New Roman", serif;
+.cta{
+display:block;
+margin:14px auto 0;
+width:100%;
+max-width:360px;
+text-align:center;
+text-decoration:none;
+color:#002725;
+background:linear-gradient(180deg,#4af2e6 0%,#24ddd0 100%);
+border-radius:999px;
+padding:15px 16px;
+font-size:20px;
+font-weight:900;
+letter-spacing:1.5px;
+text-transform:uppercase;
+font-family:Georgia,"Times New Roman",serif;
+-webkit-text-stroke:.4px #002725;
+text-shadow:0 1px 0 rgba(0,0,0,.25);
+}
 
-    /* makes text visually bolder */
-    -webkit-text-stroke: 0.4px #002725;
-    text-shadow: 
-        0 1px 0 rgba(0,0,0,0.25),
-        0 0 2px rgba(0,0,0,0.25);
+.mini{
+text-align:center;
+margin-top:12px;
+font-size:13px;
+}
 
-    box-shadow: 0 12px 26px rgba(36,221,208,.25);
-    border: 0;
-    transform: translateZ(0);
-  }
+.hurry{
+text-align:center;
+margin-top:3px;
+color:#35eadc;
+font-size:16px;
+font-weight:900;
+}
 
-  .cta:active { transform: scale(0.99); }
+.timer{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:12px;
+}
 
-  .mini {
-    text-align: center;
-    margin-top: 18px;
-    color: #d0dfdd;
-    font-size: 14px;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-  }
+.box{
+background:#093a36;
+border-radius:14px;
+padding:14px 8px 12px;
+text-align:center;
+}
 
-  .hurry {
-    text-align: center;
-    margin-top: 6px;
-    color: var(--accent);
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    text-shadow: 0 0 16px rgba(53,234,220,.15);
-  }
+.num{
+font-size:32px;
+font-weight:900;
+}
 
-  .timer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 18px;
-  }
+.label{
+margin-top:3px;
+color:var(--pink);
+font-size:12px;
+font-weight:800;
+}
 
-  .box {
-    background: rgba(9, 58, 54, 0.92);
-    border-radius: 16px;
-    padding: 18px 14px 16px;
-    text-align: center;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
-  }
+.benefits{
+margin-top:12px;
+display:grid;
+gap:8px;
+}
 
-  .num {
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #ffffff;
-  }
+.benefit{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+font-size:14px;
+font-weight:800;
+text-align:center;
+}
 
-  .label {
-    margin-top: 6px;
-    color: var(--pink);
-    font-size: 13px;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
+.icon{
+width:20px;
+height:20px;
+background:gold;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:black;
+font-size:12px;
+font-weight:900;
+}
 
-  .benefits {
-    margin: 18px auto 0;
-    width: 100%;
-    max-width: 380px;
-    display: grid;
-    gap: 10px;
-    padding: 0 4px;
-  }
-
-  .benefit {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.2px;
-    color: #e8f7f5;
-    text-transform: uppercase;
-    text-wrap: balance;
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-    flex: 0 0 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #ffe98c 0%, #f0c94c 100%);
-    color: #6c4a00;
-    box-shadow: 0 4px 10px rgba(0,0,0,.18);
-    font-size: 14px;
-    font-weight: 900;
-  }
-
-  .footer-space {
-    height: 16px;
-  }
-
-  @media (max-width: 380px) {
-    .title { font-size: 28px; }
-    .subtitle { font-size: 13px; }
-    .num { font-size: 36px; }
-    .benefit { font-size: 14px; }
-  }
 </style>
 </head>
+
 <body>
-  <main class="phone">
-    <div class="top-strip" aria-label="ticker">
-      <div class="marquee">VIP SURESHOT • LIMITED TIME • JOIN FAST • VIP SURESHOT • LIMITED TIME • JOIN FAST •</div>
-    </div>
+<main class="phone">
 
-    <section class="card">
-      <img class="hero-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Luxury sports car" />
+<div class="top-strip">
+<div class="marquee">
+VIP SURESHOT • LIMITED TIME • JOIN FAST • VIP SURESHOT • LIMITED TIME • JOIN FAST •
+</div>
+</div>
 
-      <h1 class="title">JAI CLUB VIP MEMBERS</h1>
+<section class="card">
 
-      <div class="subtitle-wrap">
-        <div class="trophy">🏆</div>
-        <div class="subtitle">Join fast for free VIP access and premium updates</div>
-      </div>
+<img class="hero-img"
+src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
 
-      <a class="cta" href="https://t.me/+-XqEKs424lwxNzY1" onclick="fbq && fbq('track','Lead')">Join Hack Channel</a>
+<h1 class="title">JAI CLUB VIP MEMBERS</h1>
 
-      <div class="mini">FREE VIP ACCESS</div>
-      <div class="hurry">Hurry Up! Join Now</div>
+<div class="subtitle-wrap">
+🏆
+<div class="subtitle">
+JOIN FAST FOR FREE VIP ACCESS AND PREMIUM UPDATES
+</div>
+</div>
 
-      <div class="timer">
-        <div class="box">
-          <div class="num" id="min">29</div>
-          <div class="label">Min</div>
-        </div>
-        <div class="box">
-          <div class="num" id="sec">39</div>
-          <div class="label">Sec</div>
-        </div>
-      </div>
+<a class="cta"
+href="https://t.me/+-XqEKs424lwxNzY1"
+onclick="fbq && fbq('track','Lead')">
+JOIN HACK CHANNEL
+</a>
 
-      <div class="benefits">
-        <div class="benefit"><span class="icon">★</span><span>100% Winning Sureshot</span></div>
-        <div class="benefit"><span class="icon">★</span><span>100% Loss Recovery</span></div>
-        <div class="benefit"><span class="icon">★</span><span>Monthly Income 30K–50K</span></div>
-      </div>
-    </section>
+<div class="mini">FREE VIP ACCESS</div>
+<div class="hurry">HURRY UP! JOIN NOW</div>
 
-    <div class="footer-space"></div>
-  </main>
+<div class="timer">
+<div class="box">
+<div class="num" id="min">29</div>
+<div class="label">MIN</div>
+</div>
 
-  <script>
-    let m = 29;
-    let s = 39;
+<div class="box">
+<div class="num" id="sec">39</div>
+<div class="label">SEC</div>
+</div>
+</div>
 
-    function renderTimer() {
-      document.getElementById('min').textContent = String(m).padStart(2, '0');
-      document.getElementById('sec').textContent = String(s).padStart(2, '0');
-    }
+<div class="benefits">
+<div class="benefit"><span class="icon">★</span>100% WINNING SURESHOT</div>
+<div class="benefit"><span class="icon">★</span>100% LOSS RECOVERY</div>
+<div class="benefit"><span class="icon">★</span>MONTHLY INCOME 30K–50K</div>
+</div>
 
-    renderTimer();
+</section>
+</main>
 
-    setInterval(() => {
-      s -= 1;
-      if (s < 0) {
-        s = 59;
-        m -= 1;
-      }
-      if (m < 0) {
-        m = 29;
-        s = 39;
-      }
-      renderTimer();
-    }, 1000);
-  </script>
+<script>
+let m=29;
+let s=39;
+
+setInterval(()=>{
+s--;
+if(s<0){s=59;m--}
+if(m<0){m=29;s=39}
+
+document.getElementById("min").innerText=m;
+document.getElementById("sec").innerText=s;
+
+},1000);
+</script>
+
 </body>
 </html>
