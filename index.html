@@ -1,183 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>JAI CLUB VIP MEMBERS</title>
 
-<style>
-:root{
---accent:#35eadc;
---pink:#ff5e84;
-}
-
-*{box-sizing:border-box}
-
-html,body{
-margin:0;
-background:linear-gradient(180deg,#022522 0%,#01231f 100%);
-font-family:Arial,Helvetica,sans-serif;
-color:#fff;
-}
-
-body{
-display:flex;
-justify-content:center;
-}
-
-.phone{
-width:100%;
-max-width:430px;
-padding:8px 12px 10px;
-}
-
-.top-strip{
-overflow:hidden;
-background:var(--accent);
-color:#003b38;
-border-radius:999px;
-padding:10px 0;
-font-weight:900;
-text-transform:uppercase;
-}
-
-.marquee{
-display:inline-block;
-white-space:nowrap;
-padding-left:100%;
-animation:scrollLeft 10s linear infinite;
-font-size:12px;
-}
-
-@keyframes scrollLeft{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
-.card{
-margin-top:8px;
-background:linear-gradient(180deg,#0a4842,#081e1c);
-border:2px solid #28e5d8;
-border-radius:20px;
-padding:10px;
-}
-
-.hero-img{
-width:100%;
-border-radius:14px;
-}
-
-.title{
-margin:8px 0 3px;
-text-align:center;
-font-size:20px;
-font-weight:900;
-text-transform:uppercase;
-line-height:1.1;
-}
-
-.subtitle-wrap{
-text-align:center;
-margin-bottom:4px;
-}
-
-.subtitle{
-font-size:12px;
-opacity:.9;
-}
-
-.cta{
-display:block;
-margin:10px auto 0;
-width:100%;
-max-width:360px;
-text-align:center;
-text-decoration:none;
-color:#002725;
-background:linear-gradient(180deg,#4af2e6 0%,#24ddd0 100%);
-border-radius:999px;
-padding:14px 14px;
-font-size:19px;
-font-weight:900;
-letter-spacing:1.2px;
-text-transform:uppercase;
-font-family:Georgia,"Times New Roman",serif;
--webkit-text-stroke:.4px #002725;
-text-shadow:0 1px 0 rgba(0,0,0,.25);
-}
-
-.mini{
-text-align:center;
-margin-top:8px;
-font-size:12px;
-}
-
-.hurry{
-text-align:center;
-margin-top:2px;
-color:#35eadc;
-font-size:15px;
-font-weight:900;
-}
-
-.timer{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-top:8px;
-}
-
-.box{
-background:#093a36;
-border-radius:12px;
-padding:10px 6px 8px;
-text-align:center;
-}
-
-.num{
-font-size:26px;
-font-weight:900;
-}
-
-.label{
-margin-top:2px;
-color:var(--pink);
-font-size:10px;
-font-weight:800;
-}
-
-.benefits{
-margin-top:8px;
-display:grid;
-gap:6px;
-}
-
-.benefit{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:6px;
-font-size:13px;
-font-weight:800;
-text-align:center;
-}
-
-.icon{
-width:18px;
-height:18px;
-background:gold;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:black;
-font-size:11px;
-font-weight:900;
-}
-
-</style>
-
-  <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -194,73 +19,267 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1305926647049773&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Earn With Mani</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+    :root{
+      --bg:#10151b;
+      --title:#56b9fc;
+      --sub:#b8bcc2;
+      --foot:rgba(255,255,255,.33);
+
+      --btn1:#2ea3f7;
+      --btn2:#56b9fc;
+      --btn3:#86d3ff;
+
+      --btnText:#08243a;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{
+      margin:0;
+      width:100%;
+      height:100%;
+      background:var(--bg);
+      font-family:'Oswald', Arial, Helvetica, sans-serif;
+      overflow:hidden;
+    }
+
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+    }
+
+    .screen{
+      width:100%;
+      max-width:430px;
+      min-height:100vh;
+      background:var(--bg);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero{
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      text-align:center;
+      padding-top:38vh;
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    .title{
+      margin:0;
+      color:var(--title);
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.2px;
+      line-height:.94;
+      font-size:clamp(42px, 7vw, 54px);
+      text-shadow:
+        0 0 6px rgba(86,185,252,.55),
+        0 0 14px rgba(86,185,252,.40),
+        0 0 26px rgba(86,185,252,.20);
+      animation:titleGlow 2.8s ease-in-out infinite;
+    }
+
+    @keyframes titleGlow{
+      0%,100%{
+        filter:brightness(1);
+        text-shadow:
+          0 0 6px rgba(86,185,252,.55),
+          0 0 14px rgba(86,185,252,.40),
+          0 0 26px rgba(86,185,252,.18);
+      }
+      50%{
+        filter:brightness(1.12);
+        text-shadow:
+          0 0 10px rgba(86,185,252,.85),
+          0 0 20px rgba(86,185,252,.58),
+          0 0 40px rgba(86,185,252,.26);
+      }
+    }
+
+    .subtitle{
+      margin-top:22px;
+      color:var(--sub);
+      text-transform:uppercase;
+      font-size:clamp(18px, 3.8vw, 24px);
+      line-height:1.03;
+      letter-spacing:.1px;
+      font-weight:400;
+    }
+
+    .btn-wrap{
+      margin-top:52px;
+      width:min(100%, 330px);
+    }
+
+    .btn{
+      position:relative;
+      width:100%;
+      border:none;
+      border-radius:999px;
+      padding:14px 18px;
+      background:linear-gradient(90deg, var(--btn1), var(--btn2), var(--btn3), var(--btn2), var(--btn1));
+      background-size:300% 100%;
+      color:var(--btnText);
+      font-size:clamp(20px, 4vw, 26px);
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+      overflow:hidden;
+      cursor:pointer;
+      box-shadow:
+        0 8px 18px rgba(0,0,0,.32),
+        0 0 18px rgba(86,185,252,.18),
+        0 0 28px rgba(86,185,252,.10);
+      animation:btnFlow 3s linear infinite, btnPulse 1.8s ease-in-out infinite;
+      transition:transform .2s ease, box-shadow .2s ease;
+      text-shadow:0 1px 0 rgba(255,255,255,.28);
+    }
+
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:-40% -60%;
+      background:linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 35%,
+        rgba(255,255,255,.25) 50%,
+        rgba(255,255,255,0) 65%
+      );
+      transform:translateX(-40%) rotate(12deg);
+      animation:shine 2.4s linear infinite;
+      pointer-events:none;
+    }
+
+    .btn::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      pointer-events:none;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px) scale(1.01);
+      box-shadow:
+        0 10px 20px rgba(0,0,0,.36),
+        0 0 24px rgba(86,185,252,.28),
+        0 0 42px rgba(86,185,252,.18);
+    }
+
+    .btn:active{
+      transform:scale(.99);
+    }
+
+    @keyframes btnFlow{
+      0%{ background-position:0% 50%; }
+      100%{ background-position:100% 50%; }
+    }
+
+    @keyframes btnPulse{
+      0%,100%{
+        box-shadow:
+          0 8px 18px rgba(0,0,0,.32),
+          0 0 16px rgba(86,185,252,.16),
+          0 0 28px rgba(86,185,252,.10);
+      }
+      50%{
+        box-shadow:
+          0 8px 18px rgba(0,0,0,.32),
+          0 0 22px rgba(86,185,252,.30),
+          0 0 42px rgba(86,185,252,.18);
+      }
+    }
+
+    @keyframes shine{
+      0%{ transform:translateX(-60%) rotate(12deg); opacity:0; }
+      20%{ opacity:1; }
+      50%{ opacity:.9; }
+      100%{ transform:translateX(60%) rotate(12deg); opacity:0; }
+    }
+
+    .footer{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:52px;
+      text-align:center;
+      color:var(--foot);
+      font-size:13px;
+      letter-spacing:.2px;
+      padding:0 16px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    @media (max-width: 390px){
+      .hero{ padding-top:40vh; }
+      .btn-wrap{ width:min(100%, 300px); margin-top:46px; }
+      .footer{ bottom:32px; font-size:12px; }
+      .subtitle{ margin-top:18px; }
+    }
+  </style>
 </head>
-
 <body>
-<main class="phone">
+  <div class="screen">
+    <div class="hero">
+      <h1 class="title">
+        <span id="title1">EARN WITH</span><br>
+        <span id="title2">MANI</span>
+      </h1>
 
-<div class="top-strip">
-<div class="marquee">
-VIP SURESHOT • LIMITED TIME • JOIN FAST
-</div>
-</div>
+      <div class="subtitle">
+        <div id="sub1">DAILY LIVE SURESHOT</div>
+        <div id="sub2">JOIN TELEGRAM</div>
+      </div>
 
-<section class="card">
+      <div class="btn-wrap">
+        <button class="btn" id="ctaBtn">JOIN TELEGRAM</button>
+      </div>
+    </div>
 
-<img class="hero-img" src="pic1.jpg">
+    <div class="footer" id="footerText">© 2026 All rights reserved.</div>
+  </div>
 
-<h1 class="title">कौन कहता है कलर ट्रेडिंग से किस्मत नहीं बदली जा सकती, 10 दिन मेरे लिंक से मेरे चैनल में खेलो फिर देखो,</h1>
+  <script>
+    /* Edit text only here */
+    const PAGE_TEXT = {
+      title1: "EARN WITH MANI",
+      sub1: "DAILY LIVE SURESHOT",
+      sub2: "JOIN TELEGRAM",
+      button: "JOIN TELEGRAM",
+      footer: "© 2026 All rights reserved.",
+      link: "https://t.me/+OyeDpQq3Io8zZmRl"
+    };
 
-<div class="subtitle-wrap">
+    document.getElementById("title1").textContent = PAGE_TEXT.title1;
+    document.getElementById("title2").textContent = PAGE_TEXT.title2;
+    document.getElementById("sub1").textContent = PAGE_TEXT.sub1;
+    document.getElementById("sub2").textContent = PAGE_TEXT.sub2;
+    document.getElementById("ctaBtn").textContent = PAGE_TEXT.button;
+    document.getElementById("footerText").textContent = PAGE_TEXT.footer;
 
-</div>
-
-<a class="cta"
-href="https://t.me/+-XqEKs424lwxNzY1"
-onclick="fbq && fbq('track','Lead')">
-JOIN HACK CHANNEL
-</a>
-
-<div class="mini">FREE VIP ACCESS</div>
-<div class="hurry">HURRY UP! JOIN NOW</div>
-
-<div class="timer">
-<div class="box">
-<div class="num" id="min">29</div>
-<div class="label">MIN</div>
-</div>
-
-<div class="box">
-<div class="num" id="sec">39</div>
-<div class="label">SEC</div>
-</div>
-</div>
-
-<div class="benefits">
-<div class="benefit"><span class="icon">★</span>100% WINNING SURESHOT</div>
-<div class="benefit"><span class="icon">★</span>100% LOSS RECOVERY</div>
-<div class="benefit"><span class="icon">★</span>MONTHLY INCOME 30K–50K</div>
-</div>
-
-</section>
-</main>
-
-<script>
-let m=29;
-let s=39;
-
-setInterval(()=>{
-s--;
-if(s<0){s=59;m--}
-if(m<0){m=29;s=39}
-
-document.getElementById("min").innerText=m;
-document.getElementById("sec").innerText=s;
-
-},1000);
-</script>
-
+    document.getElementById("ctaBtn").addEventListener("click", function () {
+      window.location.href = PAGE_TEXT.link;
+    });
+  </script>
 </body>
 </html>
