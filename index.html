@@ -1,267 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Earn With Mani</title>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
-
-    :root{
-      --bg:#10151b;
-      --title:#56b9fc;
-      --sub:#b8bcc2;
-      --foot:rgba(255,255,255,.33);
-
-      --btn1:#2ea3f7;
-      --btn2:#56b9fc;
-      --btn3:#86d3ff;
-
-      --btnText:#08243a;
+@media screen and (max-width: 768px) {
+    .main-wrapper {
+        padding: 0;
     }
-
-    *{ box-sizing:border-box; }
-    html,body{
-      margin:0;
-      width:100%;
-      height:100%;
-      background:var(--bg);
-      font-family:'Oswald', Arial, Helvetica, sans-serif;
-      overflow:hidden;
+    .custom-card {
+        padding: 26px 18px;
+        border-radius: 24px;
     }
-
-    body{
-      display:flex;
-      justify-content:center;
-      align-items:stretch;
+    .profile-circle-container {
+        width: 145px;
+        height: 145px;
     }
-
-    .screen{
-      width:100%;
-      max-width:430px;
-      min-height:100vh;
-      background:var(--bg);
-      position:relative;
-      overflow:hidden;
+    .custom-title {
+        font-size: 32px;
     }
-
-    .hero{
-      position:absolute;
-      left:0;
-      right:0;
-      top:0;
-      bottom:0;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-start;
-      text-align:center;
-      padding-top:38vh;
-      padding-left:20px;
-      padding-right:20px;
+    .custom-telegram-btn {
+        min-height: 58px;
+        font-size: 19px;
     }
+}
+</style>
 
-    .title{
-      margin:0;
-      color:var(--title);
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:.2px;
-      line-height:.94;
-      font-size:clamp(42px, 7vw, 54px);
-      text-shadow:
-        0 0 6px rgba(86,185,252,.55),
-        0 0 14px rgba(86,185,252,.40),
-        0 0 26px rgba(86,185,252,.20);
-      animation:titleGlow 2.8s ease-in-out infinite;
-    }
-
-    @keyframes titleGlow{
-      0%,100%{
-        filter:brightness(1);
-        text-shadow:
-          0 0 6px rgba(86,185,252,.55),
-          0 0 14px rgba(86,185,252,.40),
-          0 0 26px rgba(86,185,252,.18);
-      }
-      50%{
-        filter:brightness(1.12);
-        text-shadow:
-          0 0 10px rgba(86,185,252,.85),
-          0 0 20px rgba(86,185,252,.58),
-          0 0 40px rgba(86,185,252,.26);
-      }
-    }
-
-    .subtitle{
-      margin-top:22px;
-      color:var(--sub);
-      text-transform:uppercase;
-      font-size:clamp(18px, 3.8vw, 24px);
-      line-height:1.03;
-      letter-spacing:.1px;
-      font-weight:400;
-    }
-
-    .btn-wrap{
-      margin-top:52px;
-      width:min(100%, 330px);
-    }
-
-    .btn{
-      position:relative;
-      width:100%;
-      border:none;
-      border-radius:999px;
-      padding:14px 18px;
-      background:linear-gradient(90deg, var(--btn1), var(--btn2), var(--btn3), var(--btn2), var(--btn1));
-      background-size:300% 100%;
-      color:var(--btnText);
-      font-size:clamp(20px, 4vw, 26px);
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:.4px;
-      overflow:hidden;
-      cursor:pointer;
-      box-shadow:
-        0 8px 18px rgba(0,0,0,.32),
-        0 0 18px rgba(86,185,252,.18),
-        0 0 28px rgba(86,185,252,.10);
-      animation:btnFlow 3s linear infinite, btnPulse 1.8s ease-in-out infinite;
-      transition:transform .2s ease, box-shadow .2s ease;
-      text-shadow:0 1px 0 rgba(255,255,255,.28);
-    }
-
-    .btn::before{
-      content:"";
-      position:absolute;
-      inset:-40% -60%;
-      background:linear-gradient(
-        120deg,
-        rgba(255,255,255,0) 35%,
-        rgba(255,255,255,.25) 50%,
-        rgba(255,255,255,0) 65%
-      );
-      transform:translateX(-40%) rotate(12deg);
-      animation:shine 2.4s linear infinite;
-      pointer-events:none;
-    }
-
-    .btn::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.18);
-      pointer-events:none;
-    }
-
-    .btn:hover{
-      transform:translateY(-1px) scale(1.01);
-      box-shadow:
-        0 10px 20px rgba(0,0,0,.36),
-        0 0 24px rgba(86,185,252,.28),
-        0 0 42px rgba(86,185,252,.18);
-    }
-
-    .btn:active{
-      transform:scale(.99);
-    }
-
-    @keyframes btnFlow{
-      0%{ background-position:0% 50%; }
-      100%{ background-position:100% 50%; }
-    }
-
-    @keyframes btnPulse{
-      0%,100%{
-        box-shadow:
-          0 8px 18px rgba(0,0,0,.32),
-          0 0 16px rgba(86,185,252,.16),
-          0 0 28px rgba(86,185,252,.10);
-      }
-      50%{
-        box-shadow:
-          0 8px 18px rgba(0,0,0,.32),
-          0 0 22px rgba(86,185,252,.30),
-          0 0 42px rgba(86,185,252,.18);
-      }
-    }
-
-    @keyframes shine{
-      0%{ transform:translateX(-60%) rotate(12deg); opacity:0; }
-      20%{ opacity:1; }
-      50%{ opacity:.9; }
-      100%{ transform:translateX(60%) rotate(12deg); opacity:0; }
-    }
-
-    .footer{
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:52px;
-      text-align:center;
-      color:var(--foot);
-      font-size:13px;
-      letter-spacing:.2px;
-      padding:0 16px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-
-    @media (max-width: 390px){
-      .hero{ padding-top:40vh; }
-      .btn-wrap{ width:min(100%, 300px); margin-top:46px; }
-      .footer{ bottom:32px; font-size:12px; }
-      .subtitle{ margin-top:18px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="screen">
-    <div class="hero">
-      <h1 class="title">
-        <span id="title1">EARN WITH</span><br>
-        <span id="title2">MANI</span>
-      </h1>
-
-      <div class="subtitle">
-        <div id="sub1">DAILY LIVE SURESHOT</div>
-        <div id="sub2">JOIN TELEGRAM</div>
-      </div>
-
-      <div class="btn-wrap">
-        <button class="btn" id="ctaBtn">JOIN TELEGRAM</button>
-      </div>
+<div class="main-wrapper">
+    <div class="custom-card">
+        <!-- Circular container ensures photo is a perfect circle -->
+        <div class="profile-circle-container">
+            <img src="https://i.ibb.co/sJXDJJ0V/IMG-9543-modified.png" class="custom-profile" alt="ASAD GAMER">
+        </div>
+        <div class="custom-title">ASAD GAMER</div>
+        <a href="https://t.me/+QALL9ES9N9k0MjE1" target="_blank" rel="noopener noreferrer" class="custom-telegram-btn">
+            ✈️ Join Free Telegram
+        </a>
+        <div class="custom-timer" id="countdown">00 : 00 : 00 : 15</div>
+        <div class="custom-labels">
+            <span>DAYS</span>
+            <span>HOURS</span>
+            <span>MINUTES</span>
+            <span>SECONDS</span>
+        </div>
+        <div class="custom-footer">
+            <span class="footer-black">Ads managed by </span>
+            <span class="footer-red">GHOST</span>
+        </div>
+        
+        <!-- Disclaimer Text -->
+        <div class="custom-disclaimer">
+            <strong>Disclaimer:</strong> Join this channel at your own responsibility. The advertising agency holds no liability or responsibility for any content, services, or activities hosted within the Telegram channel.
+        </div>
     </div>
+</div>
 
-    <div class="footer" id="footerText">© 2026 All rights reserved.</div>
-  </div>
+<script>
+(function() {
+    let seconds = 15;
+    const targetLink = "https://t.me/+QALL9ES9N9k0MjE1";
 
-  <script>
-    /* Edit text only here */
-    const PAGE_TEXT = {
-      title1: "EARN WITH MANI",
-      sub1: "DAILY LIVE SURESHOT",
-      sub2: "JOIN TELEGRAM",
-      button: "JOIN TELEGRAM",
-      footer: "© 2026 All rights reserved.",
-      link: "https://t.me/+OyeDpQq3Io8zZmRl"
-    };
-
-    document.getElementById("title1").textContent = PAGE_TEXT.title1;
-    document.getElementById("title2").textContent = PAGE_TEXT.title2;
-    document.getElementById("sub1").textContent = PAGE_TEXT.sub1;
-    document.getElementById("sub2").textContent = PAGE_TEXT.sub2;
-    document.getElementById("ctaBtn").textContent = PAGE_TEXT.button;
-    document.getElementById("footerText").textContent = PAGE_TEXT.footer;
-
-    document.getElementById("ctaBtn").addEventListener("click", function () {
-      window.location.href = PAGE_TEXT.link;
-    });
-  </script>
-</body>
-</html>
+    function startTimer() {
+        let interval = setInterval(function() {
+            const timerElem = document.getElementById("countdown");
+            if (timerElem) {
+                timerElem.innerHTML = "00 : 00 : 00 : " + String(seconds).padStart(2, '0');
+            }
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = targetLink;
+            }
+            seconds--;
+        }, 1000);
+    }
+    startTimer();
+})();
+</script>
